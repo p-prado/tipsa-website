@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Tipsa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="nav.js" defer></script>
+    <link href="https://uploads-ssl.webflow.com/60b6466e608e7e05515c75ff/611a80dc246df6372f879924_Favicon%20(1).png"
+        rel="shortcut icon" type="image/x-icon">
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/b4e0939b37.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+
+        <!-- NAV BAR -->
+
+        <div class="header-bar">
+            <div class="container">
+                <div class="primary-nav">
+                    <a href="/" aria-current="page" aria-label="home" class="logo"><img
+                            src="https://uploads-ssl.webflow.com/60b6466e608e7e05515c75ff/60b646abf5304ec08c785a72_Logo%20Tipsa%20RGB.png"
+                            loading="lazy" width="112" sizes="112px"
+                            srcset="https://uploads-ssl.webflow.com/60b6466e608e7e05515c75ff/60b646abf5304ec08c785a72_Logo%20Tipsa%20RGB-p-500.png 500w, https://uploads-ssl.webflow.com/60b6466e608e7e05515c75ff/60b646abf5304ec08c785a72_Logo%20Tipsa%20RGB-p-800.png 800w, https://uploads-ssl.webflow.com/60b6466e608e7e05515c75ff/60b646abf5304ec08c785a72_Logo%20Tipsa%20RGB-p-3200.png 3200w, https://uploads-ssl.webflow.com/60b6466e608e7e05515c75ff/60b646abf5304ec08c785a72_Logo%20Tipsa%20RGB.png 9690w"
+                            alt="Logo TIPSA."></a>
+                    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                        <span class="sr-only">Menu</span>
+                    </button>
+                    <nav>
+                        <ul id="nav" class="nav">
+                            <li><a href="/" class="active">Inicio</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="/about.html">Acerca De</a></li>
+                            <li><a href="#">Galería</a></li>
+                            <li><a href="/contact.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION: CONTACT -->
+    <section class="page-hero"  id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h3>Contáctanos</h3>
+                <h1>¡Cuentanos más sobre tu proyecto!</h1>
+                <p>¡Veremos cuál es la mejor solución que podemos ofrecerte!</p>
+                <div class="contact-card-container">
+                    <a class="contact-card-wrapper" href="mailto:info@tipsa.com.gt">
+                        <div class="contact-card">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div class="contact-card-body">
+                                <h5>Envíanos un correo:</h5>
+                                <p>info@tipsa.com.gt</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="contact-card-wrapper" href="tel:+5022222222">
+                        <div class="contact-card">
+                            <i class="fa-solid fa-phone"></i>
+                            <div class="contact-card-body">
+                                <h5>Llámanos:</h5>
+                                <p>+502 2222-2222</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d977.8795444102323!2d-90.56793467567671!3d14.591181786322474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a0e25c8ec2ad%3A0xd8645d2ba53bbbd7!2sTipsa!5e0!3m2!1sen!2sgt!4v1675806305835!5m2!1sen!2sgt" width="600" height="450" style="border:0;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+            <!-- FORM -->
+
+            <form action="/" method="POST">
+                <h3>Envíanos un mensaje 🚀</h3>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" name="name" id="name" placeholder="Juan Pérez">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="jperez@ejemplo.com">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="subject">Asunto:</label>
+                    <input type="text" name="subject" id="subject" placeholder="¿De qué trata tu proyecto?">
+                </div>
+                <div class="input-group">
+                    <label for="message">Cuéntanos más de tu proyecto:</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <nav class="container">
+            <div>
+                <ul>
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Acerca De</a></li>
+                    <li><a href="">Galeria</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="">Transportadores</a></li>
+                    <li><a href="">Ingeniería Mecánica</a></li>
+                    <li><a href="">Ingeniería Eléctrica</a></li>
+                    <li><a href="">Ingeniería Industrial</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="">Metalmecánica</a></li>
+                    <li><a href="">Refrigeración</a></li>
+                    <li><a href="">Hornos</a></li>
+                    <li><a href="">Reconstrucción</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="">Mantenimiento Predictivo</a></li>
+                    <li><a href="">Termografía Infrarroja</a></li>
+                    <li><a href="">Obra Civil</a></li>
+                    <li><a href="">Taller de Torno</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr>
+        <div class="social-icons">
+            <a href="#"><img loading="lazy"
+                    src="https://uploads-ssl.webflow.com/60b6466e608e7e05515c75ff/61002343819f5e483fb4a53d_facebook%20icon.png"
+                    alt="Tipsa Facebook"></a>
+            <a href="#"><img loading="lazy"
+                    src="https://uploads-ssl.webflow.com/60b6466e608e7e05515c75ff/61240baf48c6722a0cc4a715_youtube-logo-2431.png"
+                    alt="YouTube Logo"></a>
+        </div>
+        <div class="contact">
+            <p>11 Avenida 36-71 Zona 11, Las Charcas, Ofibodegas Centro Once, Bodega #25</p>
+            <p><a href="mailto:tipsa@tipsa.com.gt">tipsa@tipsa.com.gt</a></p>
+        </div>
+        <div class="copyright">
+            <p>Tipsa &copy; 2015-2023 | Made by <a href="">HyperDev</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

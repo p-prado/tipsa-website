@@ -1,0 +1,466 @@
+/* CSS RESET */
+
+/* makes sizing simpler
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/* remove default spacing */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+    color-scheme: dark light;
+}
+
+/* min body height
+   improve text rendering */
+
+body {
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* INSERT CSS RESET */
+:root {
+    --color-primary: #212186;
+    --color-accent: #F50F17;
+    --color-background-light: #f0f0f4;
+    --color-background-white: #fff;
+    --color-primary-dark: #1B1B35;
+    --color-primary-dark-active: #26264b; /*#313158;*/ /*#242442*/
+    --color-accent-dark: #862121;
+    --color-text-dark:#242428;
+    --color-text-dark-accent: #a1a1aa;
+    --color-text-light: #fff;
+    --color-text-white: #fff;
+
+    --box-shadow-light:1px 1px 4px rgba(0,0,0,0.15);
+    --box-shadow-heavy:3px 3px 10px rgba(0,0,0,0.5);
+
+    --border-radius-img: 0.5rem;
+
+    --font-heading-primary: 'Lato', sans-serif;
+    --font-heading-secondary: 'Lato', sans-serif;
+    --font-body: 'Lato Light', sans-serif;
+
+    --margin-section: 7rem;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3 {
+
+    font-family: var(--font-primary);
+    /* font-weight: normal; */
+}
+
+h4, h5 {
+    font-family: 'Lato Light', sans-serif;
+}
+
+body{
+    font-family: 'Lato Light', sans-serif;
+    font-size: 1.2rem;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2rem;
+}
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+/* CONTAINERS */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* visibility: hidden; */
+}
+
+/* BUTTONS */
+
+.btn-primary {
+    background-color: var(--color-primary-dark);
+    color: var(--color-text-white);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-color: transparent;
+    border-radius: 0.25rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark-active);
+}
+
+/* NAV BAR */
+
+.header-bar {
+    background-color: var(--color-background-white);
+}
+.primary-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.nav {
+    list-style-type: none;
+}
+.nav li {
+    display: inline-block;
+}
+.nav li a {
+    display: inline-block;
+    padding: 2rem 1rem;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px solid transparent;
+    border-radius: 1px;
+}
+
+.nav li a:hover {
+    border-bottom-color: var(--color-accent-dark);
+    background-color: rgba(0,0,0,0.01);
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    text-align: center;
+    background-image: linear-gradient(0deg, rgba(24, 16, 26, 0.4) 0%, rgba(24, 16, 26, 0.4) 100%), url(https://cdn.pixabay.com/photo/2014/09/21/19/51/overhead-conveyor-455464_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: var(--color-text-white);
+}
+
+.hero-section .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero-section h4 {
+    margin-top: 2rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* ABOUT US SECTION */
+
+.about-us {
+    background-color: var(--color-background-white);
+    padding-block: 7rem;
+}
+
+.about-us .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 5rem;
+}
+
+.about-us .container div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+.about-us .container div * {
+    margin-block: 0.5rem;
+}
+.about-us img {
+    max-width: 100%;
+    border-radius: var(--border-radius-img);
+    box-shadow: var(--box-shadow-heavy);
+}
+.about-us p {
+    text-align: justify;
+}
+
+/* SERVICES SECTION */
+
+.servicios {
+    background-color: var(--color-background-light);
+    padding-block: 7rem;
+}
+
+.servicios h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.cards-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.card-horizontal {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    gap: 4rem;
+}
+
+.card-horizontal-alt {
+    grid-template-columns: 1fr auto;
+}
+
+.card-horizontal .card-img-container {
+    /* overflow: hidden; */
+    max-height: 18rem;
+    aspect-ratio: 3/2;
+}
+
+.card-horizontal .card-img-container .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: var(--box-shadow-heavy);
+    border-radius: var(--border-radius-img);
+}
+
+.card-horizontal .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.card-horizontal .card-body * {
+    margin-block: 0.7rem;
+}
+
+.card-horizontal .card-body *:first-child {
+    margin-block-start: 0;
+}
+
+.card-horizontal .card-body p{
+    text-align: justify;
+}
+
+.card-divider {
+    margin-block: 5rem;
+    margin-inline: auto;
+    width: 15rem;
+    border: 1px solid var(--color-primary-dark);
+}
+
+
+/* FOOTER */
+
+footer {
+    padding-block-start: 7rem;
+}
+
+footer nav.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+footer nav ul {
+    list-style-type: none;
+}
+footer nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer nav a:hover {
+    border-bottom: 1px solid var(--color-primary-dark);
+}
+
+footer hr {
+    margin: 3rem auto;
+    width: 15rem;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.social-icons * {
+    width: 35px;
+    height: 35px;
+}
+
+.contact{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.contact a {
+    display: inline-block;
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+.contact a:hover {
+    color: var(--color-primary);
+}
+
+.copyright {
+    background-color: var(--color-primary-dark);
+    padding-block: 1.5rem;
+    color: var(--color-text-light);
+    text-align: center;
+}
+.copyright a{
+    color: var(--color-text-light-accent);
+}
+
+
+
+/* CONTACT PAGE */
+
+#contact .container {
+    background-image: url(../assets/LogoTipsaART4.png);
+    background-size: cover;
+    background-repeat: none;
+}
+
+.contact-card-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-card-wrapper {
+    display: inline-block;
+    box-shadow: var(--box-shadow-light);
+    background-color: var(--color-background-white);
+    text-decoration: none;
+    width: 50%;
+    margin-block-start: 2rem;
+    margin-inline-end: 2rem;
+}
+.contact-card {
+    display:flex;
+    flex-direction: row;
+    padding: 1rem 1.5rem;
+    color: var(--color-text-dark);
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.contact-card:hover {
+    background-color: var(--color-background-light);
+}
+.contact-card:hover i {
+    color: var(--color-primary-dark);
+}
+
+.contact-card i {
+    font-size: 2rem;
+    color: var(--color-accent-dark);
+}
+
+#contact iframe {
+    margin-top: 2rem;
+}
+
+/* CONTACT FORM */
+
+form {
+    background-color: var(--color-background-white);
+    box-shadow: var(--box-shadow-light);
+    border-radius: 2rem;
+    padding: 4rem 4rem 2rem;
+}
+
+form input,
+form textarea {
+    border: 2px solid var(--color-background-light);
+    background-color: var(--color-background-light);
+    border-radius: 0.25rem;
+    line-height: 1.5rem;
+    padding: 0.75rem;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 1px solid var(--color-primary);
+}
+
+form label {
+    line-height: 2rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.input-row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+}
+.input-row .input-group {
+    width: 100%;
+}
